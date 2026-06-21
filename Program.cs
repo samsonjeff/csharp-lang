@@ -17,7 +17,7 @@ class Program
         Console.Write("Enter Employee Count:");
         int employeeCount;
         
-        while(!int.TryParse(Console.ReadLine(), out employeeCount) || employeeCount == 0){
+        while(!int.TryParse(Console.ReadLine(), out employeeCount) || employeeCount <= 0){
         Console.Write("Enter Employee Count:");
         }
 
@@ -38,7 +38,10 @@ class Program
             /* ============================================= */
             Console.Write("Enter emp ID:");
             // other way to convert int
-            int empID = int.Parse(Console.ReadLine());
+            int empID;
+            while(!int.TryParse(Console.ReadLine(), out empID)){
+                Console.Write("Enter Valid emp ID:");
+            }
             /* ============================================= */
 
 
@@ -46,7 +49,7 @@ class Program
             Console.Write("Enter emp Salary:");
             double basicSalary;
             while(!double.TryParse(Console.ReadLine(), out basicSalary) || basicSalary <= 0){
-            Console.Write("emp Salary Invalid!:");
+                Console.Write("emp Salary Invalid!:");
             }
             /* ============================================= */
 
