@@ -17,7 +17,7 @@ class Program
         Console.Write("Enter Employee Count:");
         int employeeCount;
         
-        while(!int.TryParse(Console.ReadLine(), out employeeCount)){
+        while(!int.TryParse(Console.ReadLine(), out employeeCount) || employeeCount == 0){
         Console.Write("Enter Employee Count:");
         }
 
@@ -70,10 +70,10 @@ class Program
 
             // all output
             Console.WriteLine("==================Summary====================");
-            Console.WriteLine($"Employee name: {empName}:");
-            Console.WriteLine($"Employee id: {empID}:");
-            Console.WriteLine($"Employee salary: {basicSalary}:");
-            Console.WriteLine($"Employee dependents: {empDependents}:");
+            Console.WriteLine($"Employee name: {empName}");
+            Console.WriteLine($"Employee id: {empID}");
+            Console.WriteLine($"Employee salary: {basicSalary}");
+            Console.WriteLine($"Employee dependents: {empDependents}");
             // Console.WriteLine("=============================================");
 
             double allowanceTotal = dependentsAllowance * empDependents;
@@ -86,13 +86,13 @@ class Program
             grandNetSalary += netSalary;
 
             // Console.WriteLine("=============================================");
-            Console.WriteLine($"total allowance: {allowanceTotal}:");
-            Console.WriteLine($"gross salary: {grossSalary}:");
-            Console.WriteLine($"sss deduction: {sss}:");
-            Console.WriteLine($"philhealth deduction: {philhealth}:");
-            Console.WriteLine($"pagibig deduction: {pagibig}:");
-            Console.WriteLine($"deduction total: {totalDeduction}:");
-            Console.WriteLine($"net salary: {netSalary}:");
+            Console.WriteLine($"total allowance: {allowanceTotal}");
+            Console.WriteLine($"gross salary: {grossSalary}");
+            Console.WriteLine($"5% sss deduction: {sss}");
+            Console.WriteLine($"3% philhealth deduction: {philhealth}");
+            Console.WriteLine($"4% pagibig deduction: {pagibig}");
+            Console.WriteLine($"deduction total: {totalDeduction}");
+            Console.WriteLine($"net salary: {netSalary}");
             Console.WriteLine("=============================================");        
         }
         Console.WriteLine($"Total Net Salary of All Employee: {grandNetSalary}");
