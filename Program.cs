@@ -47,8 +47,8 @@ class Program
             /* ============================================= */
             Console.Write("Enter emp Salary:");
             double basicSalary;
-            while(!double.TryParse(Console.ReadLine(), out basicSalary) || basicSalary < 1000){
-                Console.Write("Salary Must be higher than ₱1000:");
+            while(!double.TryParse(Console.ReadLine(), out basicSalary) || basicSalary <= 0){
+                Console.Write("Salary Must be higher than ₱0:");
             }
             /* ============================================= */
 
@@ -98,7 +98,7 @@ class Program
             Console.WriteLine("=============================================");        
         }
         Console.WriteLine($"Total Net Salary of All Employee: ₱{grandNetSalary}");
-        Console.Write($"Press Enter to Exit");
+        Console.Write($"Press Enter to Exit:");
         Console.ReadLine();
         
     }
