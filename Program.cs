@@ -47,8 +47,8 @@ class Program
             /* ============================================= */
             Console.Write("Enter emp Salary:");
             double basicSalary;
-            while(!double.TryParse(Console.ReadLine(), out basicSalary) || basicSalary <= 0){
-                Console.Write("emp Salary Invalid!:");
+            while(!double.TryParse(Console.ReadLine(), out basicSalary) || basicSalary < 1000){
+                Console.Write("Salary Must be higher than ₱1000:");
             }
             /* ============================================= */
 
@@ -74,7 +74,7 @@ class Program
             Console.WriteLine("==================Summary====================");
             Console.WriteLine($"Employee name: {empName}");
             Console.WriteLine($"Employee id: {empID}");
-            Console.WriteLine($"Employee salary: {basicSalary}");
+            Console.WriteLine($"Employee salary: ₱{basicSalary}");
             Console.WriteLine($"Employee dependents: {empDependents}");
             // Console.WriteLine("=============================================");
 
@@ -88,16 +88,19 @@ class Program
             grandNetSalary += netSalary;
 
             // Console.WriteLine("=============================================");
-            Console.WriteLine($"total allowance: {allowanceTotal}");
-            Console.WriteLine($"gross salary: {grossSalary}");
-            Console.WriteLine($"5% sss deduction: {sss}");
-            Console.WriteLine($"3% philhealth deduction: {philhealth}");
-            Console.WriteLine($"4% pagibig deduction: {pagibig}");
-            Console.WriteLine($"deduction total: {totalDeduction}");
-            Console.WriteLine($"net salary: {netSalary}");
+            Console.WriteLine($"total allowance: ₱{allowanceTotal}");
+            Console.WriteLine($"gross salary: ₱{grossSalary}");
+            Console.WriteLine($"5% sss deduction: ₱{sss}");
+            Console.WriteLine($"3% philhealth deduction: ₱{philhealth}");
+            Console.WriteLine($"4% pagibig deduction: ₱{pagibig}");
+            Console.WriteLine($"deduction total: ₱{totalDeduction}");
+            Console.WriteLine($"net salary: ₱{netSalary}");
             Console.WriteLine("=============================================");        
         }
-        Console.WriteLine($"Total Net Salary of All Employee: {grandNetSalary}");
+        Console.WriteLine($"Total Net Salary of All Employee: ₱{grandNetSalary}");
+        Console.Write($"Press Enter to Exit");
+        Console.ReadLine();
+        
     }
 }
 

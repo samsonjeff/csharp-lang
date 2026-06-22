@@ -5,7 +5,7 @@
 
 ## Scenario
 
-Each employee receives a basic monthly salary, dependent allowances, and is subject to government-mandated deductions.
+Each employee receives a basic monthly salary, dependent allowances is maximum of 1000
 
 ## Rules & Calculations
 
