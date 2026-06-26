@@ -7,6 +7,14 @@ class Program{
         string[] colors = {"red", "green", "blue"};
         string[] fruits = {"apple", "avocado", "berry"};
 
+       /* if write in tuples
+            var items = new (string Color, string Fruit)[] 
+        {
+            ("red", "apple"),
+            ("green", "avocado"),
+            ("blue", "berry")
+        }; */
+
         while(true){
 
             Console.WriteLine("[1] = red:apple [2] = green:avocado [3] = blue:berry");
