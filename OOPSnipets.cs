@@ -1,65 +1,90 @@
-// inheritance
-// The base class representing a general employee
+using System;
+
+// ========== INHERITANCE ==========
 class Employee
 {
-    // A field every employee has
-    public string name = "Alex"; 
+    public string Name { get; set; }
+    
+    public Employee(string name)
+    {
+        Name = name;
+    }
 }
 
-// The derived class inheriting 'name' from Employee and adding its own twist
 class Manager : Employee
 {
-    // A field exclusive only to managers
-    public int teamSize = 5; 
+    public int TeamSize { get; set; }
+    
+    // Constructor that calls the parent class constructor
+    public Manager(string name, int teamSize) : base(name)
+    {
+        TeamSize = teamSize;
+    }
 }
 
-//abstract
-// An abstract class that cannot be instantiated on its own
+// ========== ABSTRACT ==========
 abstract class Appliance
 {
-    // An abstract method with no body; child classes are forced to write the logic
-    public abstract void TurnOn(); 
+    public abstract void TurnOn();
 }
 
-// A concrete class fulfilling the contract of the abstract Appliance
 class Oven : Appliance
 {
-    // The 'override' keyword is mandatory to implement the required TurnOn method
-    public override void TurnOn() 
+    public override void TurnOn()
     {
-        // The specific implementation of how an oven turns on
-        Console.WriteLine("Heating up elements..."); 
+        Console.WriteLine("Heating up elements...");
     }
 }
 
-//encapsulation
+// ========== ENCAPSULATION ==========
 class UserProfile
 {
-    // Private field: locked tight, completely hidden from outside classes
-    private int age; 
-
-    // Public property: the controlled gatekeeper to read and write the private 'age'
-    public int Age 
+    private int age;
+    
+    public int Age
     {
-        // Getter allows outside code to read the value safely
-        get { return age; } 
-        
-        // Setter intercepts any attempt to change the value and applies a rule
-        set { age = (value < 0) ? 0 : value; } // If input is negative, default it to 0
+        get { return age; }
+        set { age = (value < 0) ? 0 : value; }
     }
 }
 
-//Polymorphism
-// Base class with a virtual method open for modification
+// ========== POLYMORPHISM ==========
 class Shape
 {
-    // 'virtual' tells C# this method can be modified by child classes
-    public virtual void Draw() { Console.WriteLine("Drawing a shape."); }
+    public virtual void Draw() 
+    { 
+        Console.WriteLine("Drawing a shape."); 
+    }
 }
 
-// Derived class reimagining the Draw method
 class Circle : Shape
 {
-    // 'override' changes the behavior of Draw specifically for Circles
-    public override void Draw() { Console.WriteLine("Drawing a circle."); }
+    public override void Draw() 
+    { 
+        Console.WriteLine("Drawing a circle."); 
+    }
+}
+
+// ========== MAIN PROGRAM ==========
+class Program
+{
+    static void Main()
+    {
+        // Test Inheritance
+        Manager mgr = new Manager("Alex", 5);
+        Console.WriteLine($"Manager: {mgr.Name}, Team: {mgr.TeamSize}");
+        
+        // Test Abstract Class
+        Oven oven = new Oven();
+        oven.TurnOn();
+        
+        // Test Encapsulation
+        UserProfile user = new UserProfile();
+        user.Age = -10;
+        Console.WriteLine($"Age: {user.Age}");
+        
+        // Test Polymorphism
+        Shape circle = new Circle();
+        circle.Draw();
+    }
 }
