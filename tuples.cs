@@ -1,23 +1,19 @@
-using System;
 
-class Program{
+class ArrayIndexing{
 
-    public static void Main(string[] args){
-        
-        string[] colors = {"red", "green", "blue"};
-        string[] fruits = {"apple", "avocado", "berry"};
+    public static void ArrayKo(){
 
-       /* if write in tuples
-            var items = new (string Color, string Fruit)[] 
+        var items = new (string Color, string Fruit, float Weight)[] 
         {
-            ("red", "apple"),
-            ("green", "avocado"),
-            ("blue", "berry")
-        }; */
+            ("red", "apple", 2.2f),
+            ("green", "avocado", 2.4f),
+            ("blue", "berry", 2.5f)
+        };
 
         while(true){
 
-            Console.WriteLine("[1] = red:apple [2] = green:avocado [3] = blue:berry");
+            Console.WriteLine("fruits details.");
+            Console.WriteLine("[1] = apple [2] = avocado  [3] = berry ");
             Console.Write("Enter a Number: ");
             
             // TryParse checks if it's a number, and if it is, assigns it to userInput
@@ -27,11 +23,11 @@ class Program{
                 continue;
             }
 
-            if(userInput >= 1 && userInput <= colors.Length)
+            if(userInput >= 1 && userInput <= items.Length)
                 {
                     int inputIndex = userInput -1; // to compliment user input on the exact index or array element
                     Console.WriteLine("========================================");
-                    Console.WriteLine($"{userInput} = {colors[inputIndex]}:{fruits[inputIndex]}");
+                    Console.WriteLine($"{userInput} = {items[inputIndex].Fruit} : {items[inputIndex].Color} : {items[inputIndex].Weight}g");
                     Console.WriteLine("========================================");
                     
                 }
@@ -43,4 +39,4 @@ class Program{
                 }
         }
     }
-}// code by: samson
+}
