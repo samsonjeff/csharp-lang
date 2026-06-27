@@ -1,7 +1,7 @@
 
-class ArrayIndexing{
+class Tuples{
 
-    public static void ArrayKo(){
+    public static void ShowTuples(){
 
         var items = new (string Color, string Fruit, float Weight)[] 
         {
