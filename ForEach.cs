@@ -2,7 +2,7 @@ class ForEach
 {
     public static void Items()
     {
-        string[,] userInfo = new string[,]
+        string[,] userInfo = new string[,] // 2D array
         {
             {"a","1"},
             {"b","2"},
@@ -15,7 +15,7 @@ class ForEach
         {   
             Console.Write(u + " ");
             if(i % userInfo.GetLength(1) == 0) Console.WriteLine();
-            i++;
+            i++; // if i = to the legnth of column every iterate console writeline
             
         }
 
