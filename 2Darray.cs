@@ -3,7 +3,7 @@ class Users
 {
     public static void retrieveUser()
     {
-        string[,] userInfo = new string[,] // 2D array
+        string[,] userInfo = new string[,] // 2D array "," represent as 2D array
         {
             {"a","1"},
             {"b","2"},
