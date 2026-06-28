@@ -28,7 +28,7 @@ class Program{
 
     }
     // method overload
-    public static int SumOf(int x, int y, int z)
+    /*public*/ /*only need if use main in separate file */static int SumOf(int x, int y, int z)
     {        
         int add = y + x + z;
 
