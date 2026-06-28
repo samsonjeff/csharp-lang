@@ -1,8 +1,17 @@
 using System;
+
 class Program{
 
+    // ======= this is the "Method" ========
+    static void Greet(string userName){
+    // Sample function. Feel free to adapt or improve this logic for your own use case.
+        Console.WriteLine($"Hello {userName}");
+    }
+    // =====================================
+
+    
     public static void Main(string[] args){
-        // I just think of a scenario where I can use that sample method I made
+        // I just think of a case where I can use that sample method I made
 
         Console.Write("Enter username: ");
         string? userInput = Console.ReadLine();
@@ -12,11 +21,8 @@ class Program{
             Console.Write("Enter username: ");
             userInput = Console.ReadLine();
         }
-        
+        // ======================================
         Greet(userInput); // to call the method
-    }
-    static void Greet(string userName)  // this is the method
-    {        
-        Console.WriteLine($"Hello {userName}");
+        // ======================================
     }
 }
