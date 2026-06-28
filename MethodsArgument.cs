@@ -9,6 +9,42 @@ class Program{
     }
     // =====================================
 
+    // =====================================
+     // Methods with returning value and method overloading
+    public static int SumOf(int x, int y)
+    {        
+        int add = y + x;
+
+        return add;
+
+    }
+
+    // method overload (changing the variable type)
+    public static float SumOf(float x, float y)
+    {        
+        float add = x + y;
+
+        return add;
+
+    }
+    // method overload
+    public static int SumOf(int x, int y, int z)
+    {        
+        int add = y + x + z;
+
+        return add;
+
+    }
+
+    public static string UsersInfo(string x, string y)
+    {        
+        string fullName = x + " " + y;
+
+        return fullName;
+
+    }
+    // =====================================
+
     
     public static void Main(string[] args){
         // I just think of a case where I can use that sample method I made
