@@ -11,7 +11,7 @@ class Program{
 
     // =====================================
      // Methods with returning value and method overloading
-    public static int SumOf(int x, int y)
+    static int SumOf(int x, int y)
     {        
         int add = y + x;
 
@@ -20,7 +20,7 @@ class Program{
     }
 
     // method overload (changing the variable type)
-    public static float SumOf(float x, float y)
+    static float SumOf(float x, float y)
     {        
         float add = x + y;
 
@@ -36,7 +36,7 @@ class Program{
 
     }
 
-    public static string UsersInfo(string x, string y)
+    static string UsersInfo(string x, string y)
     {        
         string fullName = x + " " + y;
 
