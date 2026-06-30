@@ -1,7 +1,7 @@
 
 class Parent
 {
-    // reusable in any class
+    // Public Modifier: reusable in any class
     public string name, lastName;
     public int age;
     public char gender;
